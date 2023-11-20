@@ -11,10 +11,17 @@ class TipoHabitacionSerializer(serializers.ModelSerializer):
 class ServicioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Servicio
-        fields = "__all__"
+        fields = ["nombre", "descripcion"]
 
 
-class CategoriaFullSerializer(serializers.ModelSerializer):
+class CategoriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Categoria
-        fields = "__all__"
+        fields = ["nombre", "descripcion", "estrellas"]
+
+
+class CategoriaMidSerializer(CategoriaSerializer):
+    servicios = ServicioSerializer(many=True, read_only=True)
+
+    class Meta(CategoriaSerializer.Meta):
+        fields = CategoriaSerializer.Meta.fields + ["servicios"]

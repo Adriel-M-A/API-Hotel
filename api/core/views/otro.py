@@ -3,7 +3,7 @@ from apps.core.models import TipoHabitacion, Servicio, Categoria
 from api.core.serializers.otro import (
     TipoHabitacionSerializer,
     ServicioSerializer,
-    CategoriaFullSerializer,
+    CategoriaSerializer,
 )
 
 
@@ -19,4 +19,4 @@ class ServicioViewSet(viewsets.ModelViewSet):
 
 class CategoriaViewSet(viewsets.ModelViewSet):
     queryset = Categoria.objects.all()
-    serializer_class = CategoriaFullSerializer
+    serializer_class = CategoriaSerializer
