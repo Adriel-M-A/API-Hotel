@@ -118,6 +118,7 @@ class Temporada(models.Model):
         return f"Hotel {self.hotel} - Temporada {self.tipo} - Desde dia {self.fecha_inicio} hasta {self.fecha_fin}"
 
 
+# Modelo intermedio para representar el precio por tipo de habitación en un hotel
 class PrecioPorTipo(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE, related_name="tarifas")
     tipo_habitacion = models.ForeignKey(
@@ -131,6 +132,7 @@ class PrecioPorTipo(models.Model):
         return f"Hotel: {self.hotel.nombre} - Tipo Habitacion: {self.tipohabitacion.nombre}"
 
 
+# Modelo intermedio para representar la relación entre un hotel y un vendedor
 class HotelVendedor(models.Model):
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
     vendedor = models.ForeignKey(Vendedor, on_delete=models.CASCADE)
@@ -139,6 +141,7 @@ class HotelVendedor(models.Model):
         return f"{self.hotel.nombre} - {self.vendedor.nombre}"
 
 
+# Modelo intermedio para representar la relación entre un paquete y una habitación
 class PaqueteHabitacion(models.Model):
     paquete = models.ForeignKey(Paquete, on_delete=models.CASCADE)
     habitacion = models.ForeignKey(Habitacion, on_delete=models.CASCADE)
