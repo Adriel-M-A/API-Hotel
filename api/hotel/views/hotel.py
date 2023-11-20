@@ -9,12 +9,16 @@ from api.hotel.serializers.hotel import (
     DescuentoSerializer,
     HotelFullSerializer,
 )
+from django_filters import filters
+from apps.hotel.filters import HotelFilter
 
 
 class HotelViewSet(viewsets.ModelViewSet):
     # Definimos el conjunto de datos y el serializador para el modelo Hotel
     queryset = Hotel.objects.all()
     serializer_class = HotelSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filterset_class = HotelFilter
 
     # Visualizar todos los datos de todos los hoteles
     @action(detail=False, serializer_class=HotelFullSerializer)
