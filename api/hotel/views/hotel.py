@@ -7,9 +7,10 @@ from api.hotel.serializers.hotel import (
     PaqueteSerializer,
     TemporadaSerializer,
     DescuentoSerializer,
+    HotelMidSerializer,
     HotelFullSerializer,
 )
-from django_filters import filters
+from django_filters import rest_framework as filters
 from apps.hotel.filters import HotelFilter
 
 
@@ -31,12 +32,12 @@ class HotelViewSet(viewsets.ModelViewSet):
         return super().retrieve(request, pk)
 
     # Visualizar datos intermedios de todos los hoteles
-    # @action(detail=False, serializer_class=HotelMidSerializer)
+    @action(detail=False, serializer_class=HotelMidSerializer)
     def mid(self, request):
         return super().list(request)
 
     # Visualizar datos intermedios de un único hotel
-    # @action(detail=True, url_path="mid", serializer_class=HotelMidSerializer)
+    @action(detail=True, url_path="mid", serializer_class=HotelMidSerializer)
     def mid_detail(self, request, pk=None):
         return super().retrieve(request, pk)
 
