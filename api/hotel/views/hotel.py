@@ -11,7 +11,7 @@ from api.hotel.serializers.hotel import (
     HotelFullSerializer,
 )
 from django_filters import rest_framework as filters
-from apps.hotel.filters import HotelFilter
+from api.hotel.filters.filters import HotelFilter
 
 
 class HotelViewSet(viewsets.ModelViewSet):

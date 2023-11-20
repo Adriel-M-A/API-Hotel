@@ -1,5 +1,5 @@
 import django_filters
-from .models import Hotel
+from apps.hotel.models import Hotel
 
 
 class HotelFilter(django_filters.FilterSet):

@@ -1,5 +1,5 @@
 import django_filters
-from .models import Provincia, Ciudad, Encargado
+from apps.core.models import Provincia, Ciudad, Encargado
 
 
 # -------------------- Ubicacion --------------------
