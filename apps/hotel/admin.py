@@ -1,5 +1,13 @@
 from django.contrib import admin
-from .models import Hotel, Habitacion, Paquete, Descuento, Temporada, HotelVendedor
+from .models import (
+    Hotel,
+    Habitacion,
+    Paquete,
+    Descuento,
+    Temporada,
+    HotelVendedor,
+    PaqueteHabitacion,
+)
 
 
 class HotelAdmin(admin.ModelAdmin):
@@ -32,3 +40,4 @@ admin.site.register(Paquete)
 admin.site.register(Descuento)
 admin.site.register(Temporada)
 admin.site.register(HotelVendedor)
+admin.site.register(PaqueteHabitacion)
