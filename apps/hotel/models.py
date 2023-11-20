@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator
 from decimal import Decimal
-from apps.core.models import Direccion, TipoHabitacion, Vendedor
+from apps.core.models import Direccion, Vendedor, Encargado, TipoHabitacion, Categoria
 
 
 class Hotel(models.Model):
@@ -11,11 +11,16 @@ class Hotel(models.Model):
     tipos_habitacion = models.ManyToManyField(
         TipoHabitacion, through="PrecioPorTipo", related_name="hoteles"
     )
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, null=True)
+    encargado = models.OneToOneField(Encargado, on_delete=models.SET_NULL, null=True)
     # Revisar
     habilitado = models.BooleanField(default=False)
 
     def __str__(self):
         return self.nombre
+
+    def vendedores(self):
+        return [hv.vendedor for hv in self.hotelvendedor_set.all()]
 
 
 class Habitacion(models.Model):

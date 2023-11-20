@@ -1,11 +1,31 @@
 from rest_framework import serializers
 from apps.hotel.models import Hotel, Habitacion, Paquete, Temporada, Descuento
+from api.core.serializers.ubicacion import UbicacionSerializer
+from api.core.serializers.persona import VendedorSerializer, EncargadoSerializer
 
 
 class HotelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hotel
         fields = "__all__"
+
+
+class HotelFullSerializer(serializers.ModelSerializer):
+    ubicacion = UbicacionSerializer(source="*", read_only=True)
+    encargado = EncargadoSerializer()
+    vendedores = VendedorSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Hotel
+        fields = [
+            "nombre",
+            "encargado",
+            "ubicacion",
+            "descripcion",
+            "tipos_habitacion",
+            "habilitado",
+            "vendedores",
+        ]
 
 
 class HabitacionSerializer(serializers.ModelSerializer):

@@ -29,3 +29,11 @@ class DireccionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Direccion
         fields = "__all__"
+
+
+class UbicacionSerializer(serializers.Serializer):
+    pais = serializers.CharField(source="direccion.ciudad.provincia.pais.nombre")
+    provincia = serializers.CharField(source="direccion.ciudad.provincia.nombre")
+    ciudad = serializers.CharField(source="direccion.ciudad.nombre")
+    calle = serializers.CharField(source="direccion.calle")
+    numero = serializers.IntegerField(source="direccion.numero")
