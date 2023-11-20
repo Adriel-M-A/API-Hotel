@@ -1,14 +1,16 @@
 from django.db import models
 from django.core.validators import MinValueValidator
 from decimal import Decimal
-from apps.core.models import Direccion, TipoHabitacion
+from apps.core.models import Direccion, TipoHabitacion, Vendedor
 
 
 class Hotel(models.Model):
     nombre = models.CharField(max_length=100)
     direccion = models.OneToOneField(Direccion, on_delete=models.CASCADE)
     descripcion = models.TextField(blank=True)
-    tipos_habitacion = models.ManyToManyField(TipoHabitacion)
+    tipos_habitacion = models.ManyToManyField(
+        TipoHabitacion, through="PrecioPorTipo", related_name="hoteles"
+    )
     # Revisar
     habilitado = models.BooleanField(default=False)
 
@@ -34,9 +36,7 @@ class Paquete(models.Model):
     coeficiente_descuento = models.DecimalField(
         max_digits=5, decimal_places=2, validators=[MinValueValidator(Decimal("0"))]
     )
-    habitaciones = models.ManyToManyField(
-        Habitacion, related_name="paquetes", blank=True
-    )
+    habitaciones = models.ManyToManyField(Habitacion, related_name="paquetes")
     descripcion = models.TextField(blank=True)
 
     def __str__(self):
@@ -70,3 +70,24 @@ class Temporada(models.Model):
 
     def __str__(self):
         return f"Hotel {self.hotel} - Temporada {self.tipo} - Desde dia {self.fecha_inicio} hasta {self.fecha_fin}"
+
+
+class PrecioPorTipo(models.Model):
+    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE, related_name="tarifas")
+    tipo_habitacion = models.ForeignKey(
+        TipoHabitacion, on_delete=models.CASCADE, related_name="tarifas"
+    )
+    precio = models.DecimalField(
+        max_digits=10, decimal_places=2, validators=[MinValueValidator(Decimal("0.01"))]
+    )
+
+    def __str__(self):
+        return f"Hotel: {self.hotel.nombre} - Tipo Habitacion: {self.tipohabitacion.nombre}"
+
+
+class HotelVendedor(models.Model):
+    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
+    vendedor = models.ForeignKey(Vendedor, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.hotel.nombre} - {self.vendedor.nombre}"
