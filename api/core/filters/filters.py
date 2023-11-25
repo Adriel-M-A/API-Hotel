@@ -6,7 +6,7 @@ from apps.core.models import Provincia, Ciudad, Encargado
 
 
 class ProvinciaFilter(django_filters.FilterSet):
-    pais = django_filters.CharFilter(field_name="pais__codigo", lookup_expr="exact")
+    pais = django_filters.CharFilter(field_name="pais__id", lookup_expr="exact")
 
     class Meta:
         model = Provincia
