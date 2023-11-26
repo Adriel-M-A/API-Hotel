@@ -1,0 +1,522 @@
+[
+    {
+        "model": "hotel.hotel",
+        "pk": 1,
+        "fields": {
+            "nombre": "Rayentray",
+            "direccion": 1,
+            "descripcion": "El Hotel Rayentray Trelew es un hotel de 3 estrellas enfocado al turismo de negocios que se encuentra situado en una de las zonas comerciales del centro de la localidad de Trelew, en Argentina. Las habitaciones, de mobiliario funcional, estßn equipadas con mesa de trabajo, televisor, aire acondicionado, camas individuales o de matrimonio, calefacci¾n, telÚfono y ba±o privado con ducha y productos para el aseo personal. El Hotel Rayentray Trelew dispone de zona de spa con piscina climatizada, sauna y servicio de masajes, centro de negocios, sala de reuniones, sal¾n para eventos y ofrece a sus huÚspedes servicio de prensa diaria, recepci¾n 24 horas con mostrador de asistencia turÝstica y conexi¾n wifi gratuita. El restaurante del hotel ofrece platos gourmet y platos dietÚticos con servicio de desayuno estilo continental, almuerzo y cena. Estß situado a unos diez minutos andando de la Plaza Centenario.",
+            "habilitado": false,
+            "categoria": 1,
+            "encargado": "12345678",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 2,
+        "fields": {
+            "nombre": "Sunset Beach",
+            "direccion": 2,
+            "descripcion": "El Uy Sunset Beach Hotel estß situado en Punta del Este, a solo 50 metros de la playa Mansa, y ofrece habitaciones con conexi¾n WiFi gratuita y TV de plasma. Se proporciona desayuno y aparcamiento gratuito. Cuenta con una peque±a piscina cubierta.\r\n\r\nCon una decoraci¾n elegante, las habitaciones del Uy Sunset Beach tienen aire acondicionado y algunas ofrecen vistas al mar.\r\n\r\nTodos los dÝas se sirve un desayuno buffet con zumos en la sala de desayunos. TambiÚn hay un bar. Frente al establecimiento se prestan servicios de playa, incluyendo toallas, sillas de playa y sombrillas, por un suplemento.",
+            "habilitado": false,
+            "categoria": 1,
+            "encargado": "23456789",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 3,
+        "fields": {
+            "nombre": "Ideal",
+            "direccion": 3,
+            "descripcion": "Este hotel acogedor se encuentra frente a la playa y ofrece habitaciones con balc¾n privado y vistas al mar. Se pueden reservar sesiones de masaje. Hay un peque±o jardÝn con zona de terraza. La conexi¾n Wi-Fi es gratuita.\r\n\r\nEl Hotel Ideal dispone de habitaciones funcionales con TV por cable. Todas tienen ba±o privado y algunas cuentan con ba±era y vistas al jardÝn. Se ofrece servicio de lavanderÝa.\r\n\r\nEl Ideal se encuentra a 15 minutos en auto del barrio de Mar del Sud y ofrece servicio de alquiler de bicicletas. Hay instalaciones de golf a poca distancia del hotel.\r\n\r\nTodos los dÝas se sirve un desayuno americano con mermeladas regionales y pan tostado. Se puede disfrutar en el bar, que tiene vistas al jardÝn y estß decorado con muebles r·sticos de madera, o en la intimidad de la habitaci¾n.",
+            "habilitado": false,
+            "categoria": 2,
+            "encargado": "34567890",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 4,
+        "fields": {
+            "nombre": "Monte Carlo",
+            "direccion": 4,
+            "descripcion": "El HOTEL MIRAMAR cuenta con restaurante, pileta al aire libre, bar y sal¾n compartido en Miramar. Este hotel de 3 estrellas cuenta con jardÝn y habitaciones con aire acondicionado, conexi¾n wifi gratis y ba±o privado. El alojamiento cuenta con recepci¾n 24 horas, room service y servicio de cambio de divisa.\r\n\r\nLas habitaciones tienen balc¾n. Las habitaciones del HOTEL MIRAMAR cuentan con TV de pantalla plana y secador de pelo.\r\n\r\nTodas las ma±anas se sirve un desayuno buffet.\r\n\r\nLa zona de bienestar del HOTEL MIRAMAR cuenta con pileta cubierta y ba±era de hidromasaje.",
+            "habilitado": false,
+            "categoria": 3,
+            "encargado": "45678901",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 5,
+        "fields": {
+            "nombre": "Tolosa",
+            "direccion": 5,
+            "descripcion": "",
+            "habilitado": false,
+            "categoria": 5,
+            "encargado": "56789012",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 6,
+        "fields": {
+            "nombre": "Peninsula Valdes",
+            "direccion": 6,
+            "descripcion": "",
+            "habilitado": false,
+            "categoria": 3,
+            "encargado": "67890123",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 7,
+        "fields": {
+            "nombre": "El Arribo",
+            "direccion": 7,
+            "descripcion": "",
+            "habilitado": false,
+            "categoria": 6,
+            "encargado": "78901234",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 8,
+        "fields": {
+            "nombre": "Altos de La Vina",
+            "direccion": 8,
+            "descripcion": "",
+            "habilitado": false,
+            "categoria": 5,
+            "encargado": "89012345",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 9,
+        "fields": {
+            "nombre": "Piray└",
+            "direccion": 9,
+            "descripcion": "",
+            "habilitado": false,
+            "categoria": 2,
+            "encargado": "90123456",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 31,
+        "fields": {
+            "numero": 1,
+            "piso": 1,
+            "hotel": 1,
+            "tipo": 1
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 32,
+        "fields": {
+            "numero": 2,
+            "piso": 1,
+            "hotel": 1,
+            "tipo": 2
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 33,
+        "fields": {
+            "numero": 3,
+            "piso": 1,
+            "hotel": 1,
+            "tipo": 3
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 34,
+        "fields": {
+            "numero": 4,
+            "piso": 1,
+            "hotel": 1,
+            "tipo": 4
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 35,
+        "fields": {
+            "numero": 5,
+            "piso": 1,
+            "hotel": 1,
+            "tipo": 5
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 36,
+        "fields": {
+            "numero": 6,
+            "piso": 1,
+            "hotel": 1,
+            "tipo": 6
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 37,
+        "fields": {
+            "numero": 1,
+            "piso": 2,
+            "hotel": 1,
+            "tipo": 1
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 38,
+        "fields": {
+            "numero": 2,
+            "piso": 2,
+            "hotel": 1,
+            "tipo": 2
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 39,
+        "fields": {
+            "numero": 3,
+            "piso": 2,
+            "hotel": 1,
+            "tipo": 3
+        }
+    },
+    {
+        "model": "hotel.habitacion",
+        "pk": 40,
+        "fields": {
+            "numero": 4,
+            "piso": 1,
+            "hotel": 1,
+            "tipo": 4
+        }
+    },
+    {
+        "model": "hotel.hotelvendedor",
+        "pk": 1,
+        "fields": {
+            "hotel": 1,
+            "vendedor": "11000222"
+        }
+    },
+    {
+        "model": "hotel.descuento",
+        "pk": 1,
+        "fields": {
+            "hotel": 4,
+            "cantidad_habitaciones": 3,
+            "porcentaje": "0.800"
+        }
+    },
+    {
+        "model": "hotel.descuento",
+        "pk": 2,
+        "fields": {
+            "hotel": 1,
+            "cantidad_habitaciones": 2,
+            "porcentaje": "0.900"
+        }
+    },
+    {
+        "model": "hotel.descuento",
+        "pk": 3,
+        "fields": {
+            "hotel": 2,
+            "cantidad_habitaciones": 5,
+            "porcentaje": "0.500"
+        }
+    },
+    {
+        "model": "hotel.descuento",
+        "pk": 4,
+        "fields": {
+            "hotel": 5,
+            "cantidad_habitaciones": 4,
+            "porcentaje": "0.700"
+        }
+    },
+    {
+        "model": "hotel.descuento",
+        "pk": 5,
+        "fields": {
+            "hotel": 6,
+            "cantidad_habitaciones": 5,
+            "porcentaje": "0.900"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 1,
+        "fields": {
+            "hotel": 1,
+            "tipo": 0,
+            "fecha_inicio": "2023-11-07",
+            "fecha_fin": "2023-11-30",
+            "porcentaje": "0.70"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 2,
+        "fields": {
+            "hotel": 6,
+            "tipo": 0,
+            "fecha_inicio": "2023-12-21",
+            "fecha_fin": "2024-02-21",
+            "porcentaje": "0.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 3,
+        "fields": {
+            "hotel": 6,
+            "tipo": 1,
+            "fecha_inicio": "2024-06-01",
+            "fecha_fin": "2024-09-01",
+            "porcentaje": "20.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 4,
+        "fields": {
+            "hotel": 4,
+            "tipo": 1,
+            "fecha_inicio": "2023-12-01",
+            "fecha_fin": "2024-03-01",
+            "porcentaje": "10.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 5,
+        "fields": {
+            "hotel": 9,
+            "tipo": 0,
+            "fecha_inicio": "2024-01-01",
+            "fecha_fin": "2024-05-01",
+            "porcentaje": "0.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 6,
+        "fields": {
+            "hotel": 1,
+            "tipo": 1,
+            "fecha_inicio": "2024-06-01",
+            "fecha_fin": "2024-10-01",
+            "porcentaje": "10.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 7,
+        "fields": {
+            "hotel": 8,
+            "tipo": 0,
+            "fecha_inicio": "2024-01-01",
+            "fecha_fin": "2024-04-01",
+            "porcentaje": "0.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 8,
+        "fields": {
+            "hotel": 8,
+            "tipo": 1,
+            "fecha_inicio": "2024-06-01",
+            "fecha_fin": "2024-10-01",
+            "porcentaje": "25.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 9,
+        "fields": {
+            "hotel": 3,
+            "tipo": 0,
+            "fecha_inicio": "2023-11-01",
+            "fecha_fin": "2024-04-01",
+            "porcentaje": "0.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 10,
+        "fields": {
+            "hotel": 3,
+            "tipo": 1,
+            "fecha_inicio": "2024-06-01",
+            "fecha_fin": "2024-10-01",
+            "porcentaje": "15.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 11,
+        "fields": {
+            "hotel": 7,
+            "tipo": 0,
+            "fecha_inicio": "2023-11-01",
+            "fecha_fin": "2024-02-29",
+            "porcentaje": "0.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 12,
+        "fields": {
+            "hotel": 7,
+            "tipo": 1,
+            "fecha_inicio": "2024-06-01",
+            "fecha_fin": "2024-10-01",
+            "porcentaje": "7.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 13,
+        "fields": {
+            "hotel": 2,
+            "tipo": 0,
+            "fecha_inicio": "2023-12-01",
+            "fecha_fin": "2024-04-01",
+            "porcentaje": "0.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 14,
+        "fields": {
+            "hotel": 2,
+            "tipo": 1,
+            "fecha_inicio": "2024-06-01",
+            "fecha_fin": "2024-09-01",
+            "porcentaje": "15.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 15,
+        "fields": {
+            "hotel": 5,
+            "tipo": 0,
+            "fecha_inicio": "2023-11-01",
+            "fecha_fin": "2024-01-31",
+            "porcentaje": "0.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 16,
+        "fields": {
+            "hotel": 5,
+            "tipo": 1,
+            "fecha_inicio": "2024-03-01",
+            "fecha_fin": "2024-06-01",
+            "porcentaje": "20.00"
+        }
+    },
+    {
+        "model": "hotel.temporada",
+        "pk": 17,
+        "fields": {
+            "hotel": 9,
+            "tipo": 1,
+            "fecha_inicio": "2024-06-01",
+            "fecha_fin": "2023-11-01",
+            "porcentaje": "10.00"
+        }
+    }
+]

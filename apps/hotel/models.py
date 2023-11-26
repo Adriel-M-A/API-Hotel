@@ -5,6 +5,19 @@ from django.core.exceptions import ValidationError
 from apps.core.models import Direccion, Vendedor, Encargado, TipoHabitacion, Categoria
 
 
+class HotelManager(models.Manager):
+    def verificar_disponibilidad(self, desde, hasta, localidad):
+        qs = self.get_queryset()
+        qs = qs.filter(direccion__ciudad=localidad)
+
+        hoteles_disponibles = qs.exclude(
+            habitaciones__alquileres__fecha_inicio__lte=hasta,
+            habitaciones__alquileres__fecha_fin__gte=desde,
+        )
+
+        return hoteles_disponibles
+
+
 class Hotel(models.Model):
     nombre = models.CharField(max_length=100)
     direccion = models.OneToOneField(Direccion, on_delete=models.CASCADE)
@@ -19,57 +32,73 @@ class Hotel(models.Model):
     def __str__(self):
         return self.nombre
 
-    def vendedores(self):
-        return [hv.vendedor for hv in self.hotelvendedor_set.all()]
-
     def descuentos_disponibles(self, habitaciones):
         return self.descuentos.filter(cantidad_habitaciones__lte=habitaciones).order_by(
             "-cantidad_habitaciones"
         )
 
     def temporadas_disponibles(self, inicio, fin, flexible=False):
-        qs = self.temporadas.filter(fecha_inicio__lte=inicio, fecha_fin__gte=fin)
+        temporadas = self.temporadas.filter(fecha_inicio__lt=inicio, fecha_fin__gt=fin)
+        if flexible:
+            # TODO: Flexibilidad al seleccionar alquileres, si se superpone con
+            # alquileres por unos dias pero no el total del rango inicio fin retornar True
+            pass
+        return temporadas
+
+    def paquetes_disponibles(self, inicio, fin, flexible=False):
+        qs = self.paquetes.filter(fecha_inicio__gt=inicio, fecha_fin__lt=fin)
         if flexible:
             # TODO: Flexibilidad al seleccionar alquileres, si se superpone con
             # alquileres por unos dias pero no el total del rango inicio fin retornar True
             pass
         return qs
 
-    def paquetes_disponibles(self, habitaciones, inicio, fin, flexible=False):
-        qs = self.paquetes.filter(fecha_inicio__gte=inicio, fecha_fin__lte=fin)
-        if flexible:
-            # TODO: Flexibilidad al seleccionar alquileres, si se superpone con
-            # alquileres por unos dias pero no el total del rango inicio fin retornar True
-            pass
-        return qs
-
-    def verificar_disponibilidad(self, habitaciones, desde, hasta, flexible=False):
-        if len(habitaciones) == 0:
-            raise ValidationError("Debe ingresar habitaciones")
-        if len(set([h.hotel.pk for h in habitaciones])) != 1:
-            raise ValidationError("Las habitaciones deben ser del mismo hotel")
-        descuentos = self.descuentos_disponibles(len(habitaciones))
-        paquetes = self.paquetes_disponibles(
-            habitaciones, desde, hasta, flexible=flexible
+    def get_vendedores(self):
+        vendedores = HotelVendedor.objects.filter(hotel=self).values_list(
+            "vendedor__documento", flat=True
         )
-        temporadas = self.temporadas_disponibles(desde, hasta, flexible=flexible)
-        total = sum([h.precio for h in habitaciones])
-        return {
-            "precio": total,
-            "temporadas": temporadas,
-            "paquetes": paquetes,
-            "descuentos": descuentos,
-        }
+        return Vendedor.objects.filter(documento__in=vendedores)
+
+    def habitaciones_disponibles(self, desde, hasta):
+        habitaciones = self.habitaciones.all()
+        habitaciones_disponibles = [
+            habitacion
+            for habitacion in habitaciones
+            if habitacion.habitacion_disponible(desde, hasta)
+        ]
+        return habitaciones_disponibles
 
 
 class Habitacion(models.Model):
     numero = models.PositiveIntegerField()
     piso = models.PositiveIntegerField()
-    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
-    tipo = models.ForeignKey(TipoHabitacion, on_delete=models.CASCADE)
+    hotel = models.ForeignKey(
+        Hotel, related_name="habitaciones", on_delete=models.CASCADE
+    )
+    tipo = models.ForeignKey(
+        TipoHabitacion, related_name="habitaciones", on_delete=models.CASCADE
+    )
 
     def __str__(self):
         return f"Habitacion {self.numero} ({self.tipo})"
+
+    @property
+    def precio(self):
+        # TODO: Que pasa si el hotel no tiene tarifa para el precio del tipo de habitacion
+        qs = self.hotel.tarifas.filter(tipohabitacion=self.tipo_habitacion)
+        if qs.exists():
+            return qs.first().precio
+        return Decimal("0.0")
+
+    def habitacion_disponible(self, inicio, fin, flexible=False):
+        disponible = not self.alquileres.filter(
+            fecha_fin__lt=inicio, fecha_inicio__gt=fin
+        ).exists()
+        if flexible:
+            # TODO: Flexibilidad al seleccionar alquileres, si se superpone con
+            # alquileres por unos dias pero no el total del rango inicio fin retornar True
+            pass
+        return disponible
 
 
 class Paquete(models.Model):
@@ -81,7 +110,7 @@ class Paquete(models.Model):
         max_digits=5, decimal_places=2, validators=[MinValueValidator(Decimal("0"))]
     )
     habitaciones = models.ManyToManyField(
-        Habitacion, through="PaqueteHabitacion", related_name="paquetes"
+        Habitacion, related_name="paquetes", through="PaqueteHabitacion"
     )
     descripcion = models.TextField(blank=True)
 
@@ -124,9 +153,7 @@ class PrecioPorTipo(models.Model):
     tipo_habitacion = models.ForeignKey(
         TipoHabitacion, on_delete=models.CASCADE, related_name="tarifas"
     )
-    precio = models.DecimalField(
-        max_digits=10, decimal_places=2, validators=[MinValueValidator(Decimal("0.01"))]
-    )
+    precio = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
     def __str__(self):
         return f"Hotel: {self.hotel.nombre} - Tipo Habitacion: {self.tipohabitacion.nombre}"
