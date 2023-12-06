@@ -1,0 +1,182 @@
+[
+    {
+        "model": "hotel.hotel",
+        "pk": 1,
+        "fields": {
+            "nombre": "Rayentray",
+            "direccion": 1,
+            "descripcion": "descripción",
+            "habilitado": false,
+            "categoria": 1,
+            "encargado": "12345678",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 2,
+        "fields": {
+            "nombre": "Sunset Beach",
+            "direccion": 2,
+            "descripcion": "descripción",
+            "habilitado": false,
+            "categoria": 1,
+            "encargado": "23456789",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 3,
+        "fields": {
+            "nombre": "Ideal",
+            "direccion": 3,
+            "descripcion": "descripción",
+            "habilitado": false,
+            "categoria": 2,
+            "encargado": "34567890",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 4,
+        "fields": {
+            "nombre": "Monte Carlo",
+            "direccion": 4,
+            "descripcion": "descripción",
+            "habilitado": false,
+            "categoria": 3,
+            "encargado": "45678901",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 5,
+        "fields": {
+            "nombre": "Tolosa",
+            "direccion": 5,
+            "descripcion": "descripción",
+            "habilitado": false,
+            "categoria": 5,
+            "encargado": "56789012",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 6,
+        "fields": {
+            "nombre": "Peninsula Valdes",
+            "direccion": 6,
+            "descripcion": "descripción",
+            "habilitado": false,
+            "categoria": 3,
+            "encargado": "67890123",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 7,
+        "fields": {
+            "nombre": "El Arribo",
+            "direccion": 7,
+            "descripcion": "descripción",
+            "habilitado": false,
+            "categoria": 6,
+            "encargado": "78901234",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 8,
+        "fields": {
+            "nombre": "Altos de La Vina",
+            "direccion": 8,
+            "descripcion": "descripción",
+            "habilitado": false,
+            "categoria": 5,
+            "encargado": "89012345",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "hotel.hotel",
+        "pk": 9,
+        "fields": {
+            "nombre": "Piray└",
+            "direccion": 9,
+            "descripcion": "descripción",
+            "habilitado": false,
+            "categoria": 2,
+            "encargado": "90123456",
+            "tipos_habitacion": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    }
+]
