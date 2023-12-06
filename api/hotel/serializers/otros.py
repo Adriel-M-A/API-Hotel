@@ -1,10 +1,7 @@
 from rest_framework import serializers
 from apps.hotel.models import Habitacion, Paquete, Temporada, Descuento
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a14b2b48fbae9fc52eecf4bc3b245d82f3f3331a
 class HabitacionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Habitacion

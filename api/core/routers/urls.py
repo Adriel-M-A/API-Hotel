@@ -10,7 +10,7 @@ from api.core.views.persona import (
     EncargadoViewSet,
     ClienteViewSet,
 )
-from api.core.views.otro import (
+from api.core.views.otros import (
     TipoHabitacionViewSet,
     CategoriaViewSet,
     ServicioViewSet,
