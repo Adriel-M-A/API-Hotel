@@ -1,0 +1,429 @@
+[
+    {
+        "model": "core.pais",
+        "pk": 1,
+        "fields": {
+            "nombre": "Argentina"
+        }
+    },
+    {
+        "model": "core.pais",
+        "pk": 2,
+        "fields": {
+            "nombre": "Bolivia"
+        }
+    },
+    {
+        "model": "core.pais",
+        "pk": 3,
+        "fields": {
+            "nombre": "Brasil"
+        }
+    },
+    {
+        "model": "core.pais",
+        "pk": 4,
+        "fields": {
+            "nombre": "Chile"
+        }
+    },
+    {
+        "model": "core.pais",
+        "pk": 5,
+        "fields": {
+            "nombre": "Colombia"
+        }
+    },
+    {
+        "model": "core.pais",
+        "pk": 6,
+        "fields": {
+            "nombre": "Uruguay"
+        }
+    },
+    {
+        "model": "core.pais",
+        "pk": 7,
+        "fields": {
+            "nombre": "Estados Unidos"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 1,
+        "fields": {
+            "nombre": "Chubut",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 2,
+        "fields": {
+            "nombre": "Maldonado",
+            "pais": "UR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 3,
+        "fields": {
+            "nombre": "Buenos Aires",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 4,
+        "fields": {
+            "nombre": "Santa Fe",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 5,
+        "fields": {
+            "nombre": "Tierra del Fuego",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 6,
+        "fields": {
+            "nombre": "Salta",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 7,
+        "fields": {
+            "nombre": "San Luis",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 8,
+        "fields": {
+            "nombre": "Chaco",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 9,
+        "fields": {
+            "nombre": "Cordoba",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 10,
+        "fields": {
+            "nombre": "Mendoza",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 11,
+        "fields": {
+            "nombre": "Rio Negro",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 12,
+        "fields": {
+            "nombre": "Santa Cruz",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 13,
+        "fields": {
+            "nombre": "Jujuy",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 14,
+        "fields": {
+            "nombre": "Catamarca",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 15,
+        "fields": {
+            "nombre": "Neuquen",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 16,
+        "fields": {
+            "nombre": "San Juan",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 17,
+        "fields": {
+            "nombre": "La Pampa",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 18,
+        "fields": {
+            "nombre": "Tucuman",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 19,
+        "fields": {
+            "nombre": "Misiones",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 20,
+        "fields": {
+            "nombre": "Entre Rios",
+            "pais": "AR"
+        }
+    },
+    {
+        "model": "core.provincia",
+        "pk": 21,
+        "fields": {
+            "nombre": "New York",
+            "pais": "US"
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "1000",
+        "fields": {
+            "nombre": "Buenos Aires",
+            "provincia": 3
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "10016",
+        "fields": {
+            "nombre": "New York",
+            "provincia": 21
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "20100",
+        "fields": {
+            "nombre": "Punta del Este",
+            "provincia": 2
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "3370",
+        "fields": {
+            "nombre": "Puerto Iguaz ",
+            "provincia": 19
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "4600",
+        "fields": {
+            "nombre": "San Salvador de Jujuy",
+            "provincia": 13
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "5700",
+        "fields": {
+            "nombre": "San Luis",
+            "provincia": 7
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "7165",
+        "fields": {
+            "nombre": "Villa Gesell",
+            "provincia": 3
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "7167",
+        "fields": {
+            "nombre": "Pinamar",
+            "provincia": 3
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "7607",
+        "fields": {
+            "nombre": "Miramar",
+            "provincia": 3
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "8000",
+        "fields": {
+            "nombre": "Bah a Blanca",
+            "provincia": 3
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "9100",
+        "fields": {
+            "nombre": "Trelew",
+            "provincia": 1
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "9103",
+        "fields": {
+            "nombre": "Rawson",
+            "provincia": 1
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "9120",
+        "fields": {
+            "nombre": "Puerto Madryn",
+            "provincia": 1
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "9121",
+        "fields": {
+            "nombre": "Puerto Piramides",
+            "provincia": 1
+        }
+    },
+    {
+        "model": "core.ciudad",
+        "pk": "B1900",
+        "fields": {
+            "nombre": "La Plata",
+            "provincia": 3
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 1,
+        "fields": {
+            "calle": "Belgrano",
+            "numero": 397,
+            "ciudad": "9100"
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 2,
+        "fields": {
+            "calle": "Rb. Dr. Claudio Williman",
+            "numero": 3,
+            "ciudad": "20100"
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 3,
+        "fields": {
+            "calle": "9 de Julio",
+            "numero": 626,
+            "ciudad": "7607"
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 4,
+        "fields": {
+            "calle": "Calle 16",
+            "numero": 1050,
+            "ciudad": "7607"
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 5,
+        "fields": {
+            "calle": "Roque S. Pe a",
+            "numero": 253,
+            "ciudad": "9120"
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 6,
+        "fields": {
+            "calle": "J. A. Roca",
+            "numero": 155,
+            "ciudad": "9120"
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 7,
+        "fields": {
+            "calle": "Gral. Manuel Belgrano",
+            "numero": 1263,
+            "ciudad": "4600"
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 8,
+        "fields": {
+            "calle": "Av. Pasquini Lopez",
+            "numero": 50,
+            "ciudad": "4600"
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 9,
+        "fields": {
+            "calle": "Av. Tres Fronteras",
+            "numero": 550,
+            "ciudad": "3370"
+        }
+    },
+    {
+        "model": "core.direccion",
+        "pk": 10,
+        "fields": {
+            "calle": "33rd street",
+            "numero": 45,
+            "ciudad": "10016"
+        }
+    }
+]

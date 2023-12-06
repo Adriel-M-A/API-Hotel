@@ -1,0 +1,380 @@
+[
+    {
+        "model": "core.persona",
+        "pk": "11000222",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Juan",
+            "apellido": "Juanes",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "11111111",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Adriel",
+            "apellido": "Montes",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "12345678",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Pepe",
+            "apellido": "Perez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "12654999",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Pablo",
+            "apellido": "Martinez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "12788955",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Hugo",
+            "apellido": "Hambre",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "15151515",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Luis",
+            "apellido": "Jones",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "16744266",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Cristina",
+            "apellido": "Fernandez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "23456789",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Juan",
+            "apellido": "Gonzalez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "25333745",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Fernanda",
+            "apellido": "Gomez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "26789789",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Tania",
+            "apellido": "Lopez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "34567890",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Maria",
+            "apellido": "Rodriguez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "35123123",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Juana",
+            "apellido": "Piyun",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "40988888",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Adriel",
+            "apellido": "Otnot",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "43255699",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Laureano",
+            "apellido": "Diaz",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "45678901",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Carlos",
+            "apellido": "Lopez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "56789012",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Ana",
+            "apellido": "Martinez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "67890123",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Luis",
+            "apellido": "Pereira",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "7123456",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Mark",
+            "apellido": "Zuckerberg",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "7845123",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Miguel",
+            "apellido": "Owens",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "78901234",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Sofia",
+            "apellido": "Gomez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "89012345",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Diego",
+            "apellido": "Fernandez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.persona",
+        "pk": "90123456",
+        "fields": {
+            "tipo_documento": 0,
+            "nombre": "Laura",
+            "apellido": "Ramirez",
+            "correo": "",
+            "telefono": 0
+        }
+    },
+    {
+        "model": "core.vendedor",
+        "pk": "11000222",
+        "fields": {}
+    },
+    {
+        "model": "core.vendedor",
+        "pk": "12654999",
+        "fields": {}
+    },
+    {
+        "model": "core.vendedor",
+        "pk": "15151515",
+        "fields": {}
+    },
+    {
+        "model": "core.vendedor",
+        "pk": "16744266",
+        "fields": {}
+    },
+    {
+        "model": "core.vendedor",
+        "pk": "26789789",
+        "fields": {}
+    },
+    {
+        "model": "core.vendedor",
+        "pk": "35123123",
+        "fields": {}
+    },
+    {
+        "model": "core.vendedor",
+        "pk": "40988888",
+        "fields": {}
+    },
+    {
+        "model": "core.vendedor",
+        "pk": "43255699",
+        "fields": {}
+    },
+    {
+        "model": "core.vendedor",
+        "pk": "7845123",
+        "fields": {}
+    },
+    {
+        "model": "core.encargado",
+        "pk": "11111111",
+        "fields": {
+            "asignado": false
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "12345678",
+        "fields": {
+            "asignado": true
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "12788955",
+        "fields": {
+            "asignado": false
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "23456789",
+        "fields": {
+            "asignado": true
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "25333745",
+        "fields": {
+            "asignado": false
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "34567890",
+        "fields": {
+            "asignado": true
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "45678901",
+        "fields": {
+            "asignado": true
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "56789012",
+        "fields": {
+            "asignado": true
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "67890123",
+        "fields": {
+            "asignado": true
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "7123456",
+        "fields": {
+            "asignado": true
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "78901234",
+        "fields": {
+            "asignado": true
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "89012345",
+        "fields": {
+            "asignado": true
+        }
+    },
+    {
+        "model": "core.encargado",
+        "pk": "90123456",
+        "fields": {
+            "asignado": true
+        }
+    }
+]

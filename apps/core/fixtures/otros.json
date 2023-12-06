@@ -1,0 +1,563 @@
+[
+    {
+        "model": "core.tipohabitacion",
+        "pk": 1,
+        "fields": {
+            "nombre": "Simple",
+            "descripcion": "Habitacion con una cama de una plaza.",
+            "capacidad": 1
+        }
+    },
+    {
+        "model": "core.tipohabitacion",
+        "pk": 2,
+        "fields": {
+            "nombre": "Doble",
+            "descripcion": "Habitacion con dos camas de una plaza.",
+            "capacidad": 2
+        }
+    },
+    {
+        "model": "core.tipohabitacion",
+        "pk": 3,
+        "fields": {
+            "nombre": "Doble Matrimonial",
+            "descripcion": "Habitacion con una cama de dos plazas.",
+            "capacidad": 2
+        }
+    },
+    {
+        "model": "core.tipohabitacion",
+        "pk": 4,
+        "fields": {
+            "nombre": "Triple",
+            "descripcion": "Habitacion con tres camas de una plaza.",
+            "capacidad": 3
+        }
+    },
+    {
+        "model": "core.tipohabitacion",
+        "pk": 5,
+        "fields": {
+            "nombre": "Triple Familiar",
+            "descripcion": "Habitacion con una cama de dos plazas y una cama de una plaza.",
+            "capacidad": 3
+        }
+    },
+    {
+        "model": "core.tipohabitacion",
+        "pk": 6,
+        "fields": {
+            "nombre": "Apartamento",
+            "descripcion": "Dos habitaciones separadas para 4 o 5 personas.",
+            "capacidad": 5
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 1,
+        "fields": {
+            "nombre": "Recepcion",
+            "descripcion": "Servicio de Recepcion"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 2,
+        "fields": {
+            "nombre": "Pago sin efectivo",
+            "descripcion": "Metodo de pago por tarjeta o puntos"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 3,
+        "fields": {
+            "nombre": "Desayuno extendido",
+            "descripcion": "Desayuno: Infusion, pan y dulces."
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 4,
+        "fields": {
+            "nombre": "Oferta de bebidas",
+            "descripcion": "Se proporcionan ofertas en bebidas."
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 5,
+        "fields": {
+            "nombre": "Ducha o ba era",
+            "descripcion": "Todas las habitaciones poseeran ducha y/o ba era."
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 6,
+        "fields": {
+            "nombre": "Limpieza",
+            "descripcion": "Limpieza diaria de las habitaciones"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 7,
+        "fields": {
+            "nombre": "TV a color",
+            "descripcion": "Todas las habitaciones dispondran de una TV a color con control remoto"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 8,
+        "fields": {
+            "nombre": "WIFI",
+            "descripcion": "Acceso a internet WiFi tanto en las habitaciones como en las zonas publicas"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 9,
+        "fields": {
+            "nombre": "Muebles",
+            "descripcion": "Mesa y silla"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 10,
+        "fields": {
+            "nombre": "Jabon",
+            "descripcion": "Jabones o gel de ba o"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 11,
+        "fields": {
+            "nombre": "Toallas",
+            "descripcion": "Toallas de ba o"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 12,
+        "fields": {
+            "nombre": "Oferta de productos sanitarios",
+            "descripcion": "Oferta de productos sanitarios (p. ej. cepillo de dientes, pasta de dientes, kit de afeitado)"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 13,
+        "fields": {
+            "nombre": "Personal bilingue",
+            "descripcion": "Personal bilingue (p. ej. aleman/ingles)"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 14,
+        "fields": {
+            "nombre": "Desayuno buffet",
+            "descripcion": "Desayuno con varios alimentos a eleccion del comensal"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 15,
+        "fields": {
+            "nombre": "Lampara",
+            "descripcion": "Luz de lectura al lado de la cama"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 16,
+        "fields": {
+            "nombre": "Esencia de ba o",
+            "descripcion": "Esencia de ba o o gel de ducha"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 17,
+        "fields": {
+            "nombre": "Estantes",
+            "descripcion": "Estanteria de lino"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 18,
+        "fields": {
+            "nombre": "Oferta de costurero",
+            "descripcion": "Ofertas de costurero y utensilios para lustrar zapatos"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 19,
+        "fields": {
+            "nombre": "Recepcion 10 hs.",
+            "descripcion": "Recepcion abierta las 10 horas, accesible por telefono o comunicacion digital las 24 horas desde el interior y el exterior"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 20,
+        "fields": {
+            "nombre": "Salon Suite",
+            "descripcion": "Salon suite de tres piezas en recepcion, servicio de maletas."
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 21,
+        "fields": {
+            "nombre": "Oferta de bebidas hab.",
+            "descripcion": "Oferta de bebidas en la habitacion."
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 22,
+        "fields": {
+            "nombre": "Telefono",
+            "descripcion": "Telefono bajo demanda"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 23,
+        "fields": {
+            "nombre": "Entretenimiento multimedia",
+            "descripcion": "Sistema de entretenimiento de audio o mulimedia"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 24,
+        "fields": {
+            "nombre": "Calefaccion y secador",
+            "descripcion": "Instalacion de calefaccion en el ba o, secador de pelo, pa uelos de limpieza."
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 25,
+        "fields": {
+            "nombre": "Espejo vestidor",
+            "descripcion": "Espejo vestidor, lugar para poner el equipaje/maleta"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 26,
+        "fields": {
+            "nombre": "Lavanderia",
+            "descripcion": "Servicio de lavanderia y planchado"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 27,
+        "fields": {
+            "nombre": "Almohada y manta",
+            "descripcion": "Almohada adicional y manta adicional bajo peticion"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 28,
+        "fields": {
+            "nombre": "Sistema de quejas",
+            "descripcion": "Sistema de gestion de quejas"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 29,
+        "fields": {
+            "nombre": "Sitio web hoteles",
+            "descripcion": "Sitio web bilingue propiedad del hotel"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 30,
+        "fields": {
+            "nombre": "Recepcion 16 hs.",
+            "descripcion": "Recepcion abierta las 16 horas, accesible por telefono las 24 horas desde dentro y desde fuera"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 31,
+        "fields": {
+            "nombre": "Lobby",
+            "descripcion": "Lobby con asientos y servicio de bebidas."
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 32,
+        "fields": {
+            "nombre": "Desayuno habitacion",
+            "descripcion": "Desayuno buffet o carta de menu de desayuno via servicio de habitaciones"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 33,
+        "fields": {
+            "nombre": "Bar",
+            "descripcion": "Minibar, maxibar o bebidas 16 hs via room service"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 34,
+        "fields": {
+            "nombre": "Sofa tapizado",
+            "descripcion": "Silla/sofa tapizado con mesa auxiliar"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 35,
+        "fields": {
+            "nombre": "Albornoz",
+            "descripcion": "Albornoz y zapatillas bajo peticion"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 36,
+        "fields": {
+            "nombre": "Cosmeticos",
+            "descripcion": "Productos cosmeticos (por ejemplo, gorro de ducha, lima de u as, bastoncillos de algodon), espejo de tocador, bandeja de gran tama o en el ba o"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 37,
+        "fields": {
+            "nombre": "TV Internacional",
+            "descripcion": "La television tiene canales internacionales disponibles"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 38,
+        "fields": {
+            "nombre": "Sauna",
+            "descripcion": "Instalaciones adicionales: Sauna"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 39,
+        "fields": {
+            "nombre": "Gimnasio",
+            "descripcion": "Instalaciones adicionales: Gimnasio/sala de ejercicios"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 40,
+        "fields": {
+            "nombre": "Recepcion 24 hs.",
+            "descripcion": "Recepcion abierta las 24 horas, personal multilingue"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 41,
+        "fields": {
+            "nombre": "Portero",
+            "descripcion": "Servicio de portero o valet parking"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 42,
+        "fields": {
+            "nombre": "Conserje",
+            "descripcion": "Conserje, paje"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 43,
+        "fields": {
+            "nombre": "Limusina",
+            "descripcion": "Servicio de transporte"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 44,
+        "fields": {
+            "nombre": "Equipaje",
+            "descripcion": "Servicio de equipaje"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 45,
+        "fields": {
+            "nombre": "Regalo",
+            "descripcion": "Saludo personalizado para cada huesped con flores frescas o un regalo en la habitacion"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 46,
+        "fields": {
+            "nombre": "Room service",
+            "descripcion": "Minibar y oferta de alimentos y bebidas via room service durante las 24 horas"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 47,
+        "fields": {
+            "nombre": "Internet",
+            "descripcion": "Dispositivo de Internet en la habitacion bajo peticion"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 48,
+        "fields": {
+            "nombre": "Seguridad",
+            "descripcion": "Seguro en la habitacion"
+        }
+    },
+    {
+        "model": "core.servicio",
+        "pk": 49,
+        "fields": {
+            "nombre": "Cobertura",
+            "descripcion": "Servicio de cobertura por la noche"
+        }
+    },
+    {
+        "model": "core.categoria",
+        "pk": 1,
+        "fields": {
+            "nombre": "Turista",
+            "descripcion": "Categoria: 1 estrella",
+            "estrellas": "1.0",
+            "servicios": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        }
+    },
+    {
+        "model": "core.categoria",
+        "pk": 2,
+        "fields": {
+            "nombre": "Estandar",
+            "descripcion": "Categoria: 2 estrellas",
+            "estrellas": "2.0",
+            "servicios": [
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+            ]
+        }
+    },
+    {
+        "model": "core.categoria",
+        "pk": 3,
+        "fields": {
+            "nombre": "Comodidad",
+            "descripcion": "Categoria: 3 estrellas",
+            "estrellas": "3.0",
+            "servicios": [
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29
+            ]
+        }
+    },
+    {
+        "model": "core.categoria",
+        "pk": 4,
+        "fields": {
+            "nombre": "Primera clase",
+            "descripcion": "Categoria: 4 estrellas",
+            "estrellas": "4.0",
+            "servicios": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                30,
+                31
+            ]
+        }
+    },
+    {
+        "model": "core.categoria",
+        "pk": 5,
+        "fields": {
+            "nombre": "Primera clase superior",
+            "descripcion": "Categoria: 4 estrellas y media",
+            "estrellas": "4.5",
+            "servicios": [
+                38,
+                39
+            ]
+        }
+    },
+    {
+        "model": "core.categoria",
+        "pk": 6,
+        "fields": {
+            "nombre": "Lujo",
+            "descripcion": "Categoria: 5 estrellas",
+            "estrellas": "5.0",
+            "servicios": [
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49
+            ]
+        }
+    }
+]
