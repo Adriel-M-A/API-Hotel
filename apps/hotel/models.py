@@ -79,6 +79,12 @@ class Habitacion(models.Model):
         TipoHabitacion, related_name="habitaciones", on_delete=models.CASCADE
     )
 
+    class Meta:
+        unique_together = (
+            "numero",
+            "hotel",
+        )
+
     def __str__(self):
         return f"Habitacion {self.numero} ({self.tipo})"
 
