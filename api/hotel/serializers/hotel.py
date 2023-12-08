@@ -8,19 +8,17 @@ from api.core.serializers.otro import CategoriaSerializer
 
 
 class HotelSerializer(serializers.ModelSerializer):
-    ubicacion = UbicacionSerializer(source="*", read_only=True)
-    encargado = EncargadoSerializer()
-
     class Meta:
         model = Hotel
-        fields = ["id", "nombre", "encargado", "ubicacion", "descripcion", "habilitado"]
+        fields = "__all__"
 
 
 class HotelMidSerializer(HotelSerializer):
-    categoria = CategoriaSerializer()
+    direccion = UbicacionSerializer(source="direccion")
+    categoria = CategoriaSerializer(read_only=True)
 
     class Meta(HotelSerializer.Meta):
-        fields = HotelSerializer.Meta.fields + ["categoria"]
+        fields = HotelSerializer.Meta.fields
 
 
 class HotelFullSerializer(HotelMidSerializer):
