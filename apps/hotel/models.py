@@ -1,8 +1,8 @@
 from django.db import models
 from django.core.validators import MinValueValidator
 from decimal import Decimal
-from django.core.exceptions import ValidationError
 from apps.core.models import Direccion, Vendedor, Encargado, TipoHabitacion, Categoria
+from apps.venta.models import Alquiler
 
 
 class HotelManager(models.Manager):
@@ -32,41 +32,9 @@ class Hotel(models.Model):
     def __str__(self):
         return self.nombre
 
-    def descuentos_disponibles(self, habitaciones):
-        return self.descuentos.filter(cantidad_habitaciones__lte=habitaciones).order_by(
-            "-cantidad_habitaciones"
-        )
-
-    def temporadas_disponibles(self, inicio, fin, flexible=False):
-        temporadas = self.temporadas.filter(fecha_inicio__lt=inicio, fecha_fin__gt=fin)
-        if flexible:
-            # TODO: Flexibilidad al seleccionar alquileres, si se superpone con
-            # alquileres por unos dias pero no el total del rango inicio fin retornar True
-            pass
-        return temporadas
-
-    def paquetes_disponibles(self, inicio, fin, flexible=False):
-        qs = self.paquetes.filter(fecha_inicio__gt=inicio, fecha_fin__lt=fin)
-        if flexible:
-            # TODO: Flexibilidad al seleccionar alquileres, si se superpone con
-            # alquileres por unos dias pero no el total del rango inicio fin retornar True
-            pass
-        return qs
-
-    def get_vendedores(self):
-        vendedores = HotelVendedor.objects.filter(hotel=self).values_list(
-            "vendedor__documento", flat=True
-        )
-        return Vendedor.objects.filter(documento__in=vendedores)
-
-    def habitaciones_disponibles(self, desde, hasta):
-        habitaciones = self.habitaciones.all()
-        habitaciones_disponibles = [
-            habitacion
-            for habitacion in habitaciones
-            if habitacion.habitacion_disponible(desde, hasta)
-        ]
-        return habitaciones_disponibles
+    @property
+    def alquileres(self):
+        return Alquiler.objects.filter(habitaciones__in=self.habitaciones.all())
 
 
 class Habitacion(models.Model):

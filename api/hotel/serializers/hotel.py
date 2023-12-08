@@ -14,6 +14,8 @@ from api.hotel.serializers.otros import (
     PrecioPorTipoSerializer,
 )
 
+from api.venta.serializers import AlquilerSerializer
+
 
 # Serializador base y simple para la creacion de un hotel
 class HotelSerializer(serializers.ModelSerializer):
@@ -31,7 +33,7 @@ class HotelMidSerializer(HotelSerializer):
         fields = HotelSerializer.Meta.fields
 
 
-# Este serializador es utilizado para mostrar todos los datos de un hotel, tanto los datos basico como la serializacion de los datos relacionados con el hotel
+# Este serializador es utilizado para mostrar todos los datos de un hotel, tanto los datos basicos como la serializacion de los datos relacionados con el hotel
 class HotelFullSerializer(HotelMidSerializer):
     habitaciones = HabitacionSerializer(many=True, read_only=True)
     encargado = EncargadoSerializer(read_only=True)
@@ -39,12 +41,12 @@ class HotelFullSerializer(HotelMidSerializer):
     paquetes = PaqueteSerializer(many=True, read_only=True)
     descuentos = DescuentoSerializer(many=True, read_only=True)
     temporadas = TemporadaSerializer(many=True, read_only=True)
+    alquileres = AlquilerSerializer(many=True, read_only=True, source="alquileres")
 
     class Meta(HotelMidSerializer.Meta):
         fields = HotelMidSerializer.Meta.fields + [
             "habitaciones",
             "tarifas",
             "paquetes",
-            "descuentos",
-            "temporadas",
+            "alquileres",
         ]
