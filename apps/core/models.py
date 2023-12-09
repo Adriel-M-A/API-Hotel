@@ -69,24 +69,20 @@ class Categoria(models.Model):
 # -------------------- Personas ---------------------
 
 
+class TipoDocumento(models.Model):
+    nombre = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.nombre
+
+
 class Persona(models.Model):
-    DNI = 0
-    PASAPORTE = 1
-    LIBRETA = 2
-    TIPOS_DOCUMENTO = ((DNI, "DNI"), (PASAPORTE, "PASAPORTE"), (LIBRETA, "LIBRETA"))
-    tipo_documento = models.PositiveSmallIntegerField(choices=TIPOS_DOCUMENTO)
+    tipo_documento = models.ForeignKey(TipoDocumento, on_delete=models.CASCADE)
     documento = models.CharField(max_length=13, primary_key=True)
     nombre = models.CharField(max_length=200)
     apellido = models.CharField(max_length=200)
     correo = models.EmailField(max_length=254)
-    telefono = models.PositiveIntegerField(default=0)
-
-    def save(self, *args, **kwargs):
-        self.nombre = self.nombre.capitalize()
-        super().save(*args, **kwargs)
-
-    def tipo_documento_display(self):
-        return self.get_tipo_documento_display()
+    telefono = models.PositiveIntegerField(default=0, null=True)
 
 
 class Vendedor(Persona):
@@ -99,4 +95,4 @@ class Encargado(Persona):
 
 class Cliente(Persona):
     puntos = models.PositiveIntegerField(default=0)
-    direccion = models.OneToOneField(Direccion, on_delete=models.CASCADE, null=True)
+    direccion = models.ForeignKey(Direccion, on_delete=models.CASCADE, null=True)

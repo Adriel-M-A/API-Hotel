@@ -1,9 +1,15 @@
 from rest_framework import serializers
-from apps.core.models import Persona, Vendedor, Encargado, Cliente
+from apps.core.models import TipoDocumento, Persona, Vendedor, Encargado, Cliente
+
+
+class TipoDocumentoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TipoDocumento
+        fields = ["nombre"]
 
 
 class PersonaSerializer(serializers.ModelSerializer):
-    tipo_documento = serializers.CharField(source="tipo_documento_display")
+    tipo_documento = serializers.CharField(source="tipo_documento.nombre")
 
     class Meta:
         model = Persona
