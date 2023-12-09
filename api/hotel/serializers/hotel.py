@@ -34,6 +34,7 @@ class HotelMidSerializer(HotelSerializer):
 
 
 # Este serializador es utilizado para mostrar todos los datos de un hotel, tanto los datos basicos como la serializacion de los datos relacionados con el hotel
+# Esta pensado para la pagina de un hotel, donde se muestran todos los datos
 class HotelFullSerializer(HotelMidSerializer):
     habitaciones = HabitacionSerializer(many=True, read_only=True)
     encargado = EncargadoSerializer(read_only=True)
