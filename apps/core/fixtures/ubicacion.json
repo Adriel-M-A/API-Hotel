@@ -53,7 +53,7 @@
         "pk": 1,
         "fields": {
             "nombre": "Chubut",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -61,7 +61,7 @@
         "pk": 2,
         "fields": {
             "nombre": "Maldonado",
-            "pais": "UR"
+            "pais": 6
         }
     },
     {
@@ -69,7 +69,7 @@
         "pk": 3,
         "fields": {
             "nombre": "Buenos Aires",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -77,7 +77,7 @@
         "pk": 4,
         "fields": {
             "nombre": "Santa Fe",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -85,7 +85,7 @@
         "pk": 5,
         "fields": {
             "nombre": "Tierra del Fuego",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -93,7 +93,7 @@
         "pk": 6,
         "fields": {
             "nombre": "Salta",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -101,7 +101,7 @@
         "pk": 7,
         "fields": {
             "nombre": "San Luis",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -109,7 +109,7 @@
         "pk": 8,
         "fields": {
             "nombre": "Chaco",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -117,7 +117,7 @@
         "pk": 9,
         "fields": {
             "nombre": "Cordoba",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -125,7 +125,7 @@
         "pk": 10,
         "fields": {
             "nombre": "Mendoza",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -133,7 +133,7 @@
         "pk": 11,
         "fields": {
             "nombre": "Rio Negro",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -141,7 +141,7 @@
         "pk": 12,
         "fields": {
             "nombre": "Santa Cruz",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -149,7 +149,7 @@
         "pk": 13,
         "fields": {
             "nombre": "Jujuy",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -157,7 +157,7 @@
         "pk": 14,
         "fields": {
             "nombre": "Catamarca",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -165,7 +165,7 @@
         "pk": 15,
         "fields": {
             "nombre": "Neuquen",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -173,7 +173,7 @@
         "pk": 16,
         "fields": {
             "nombre": "San Juan",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -181,7 +181,7 @@
         "pk": 17,
         "fields": {
             "nombre": "La Pampa",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -189,7 +189,7 @@
         "pk": 18,
         "fields": {
             "nombre": "Tucuman",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -197,7 +197,7 @@
         "pk": 19,
         "fields": {
             "nombre": "Misiones",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -205,7 +205,7 @@
         "pk": 20,
         "fields": {
             "nombre": "Entre Rios",
-            "pais": "AR"
+            "pais": 1
         }
     },
     {
@@ -213,7 +213,7 @@
         "pk": 21,
         "fields": {
             "nombre": "New York",
-            "pais": "US"
+            "pais": 7
         }
     },
     {

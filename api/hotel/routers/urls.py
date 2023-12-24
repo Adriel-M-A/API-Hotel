@@ -1,7 +1,7 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from api.hotel.views.hotel import (
-    HotelViewSet,
+from api.hotel.views.hotel import HotelViewSet
+from api.hotel.views.otros import (
     HabitacionViewSet,
     PaqueteViewSet,
     DescuentoViewSet,

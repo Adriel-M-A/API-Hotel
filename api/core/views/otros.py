@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from apps.core.models import TipoHabitacion, Servicio, Categoria
-from api.core.serializers.otro import (
+from api.core.serializers.otros import (
     TipoHabitacionSerializer,
     ServicioSerializer,
     CategoriaSerializer,

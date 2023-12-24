@@ -14,14 +14,14 @@ from api.hotel.serializers.otros import (
     PrecioPorTipoSerializer,
 )
 
-from api.venta.serializers import AlquilerSerializer
+from api.venta.serializers.venta import AlquilerSerializer
 
 
 # Serializador base y simple para la creacion de un hotel
 class HotelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hotel
-        fields = "__all__"
+        fields = ["id", "nombre", "descripcion"]
 
 
 # Este serializador es utilizado para dar un listado de todos los hoteles, con su informacion relevante segun el contexto a utilizar

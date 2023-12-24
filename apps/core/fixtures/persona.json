@@ -1,5 +1,26 @@
 [
     {
+        "model": "core.tipodocumento",
+        "pk": 0,
+        "fields": {
+            "nombre": "DNI"
+        }
+    },
+    {
+        "model": "core.tipodocumento",
+        "pk": 1,
+        "fields": {
+            "nombre": "Pasaporte"
+        }
+    },
+    {
+        "model": "core.tipodocumento",
+        "pk": 2,
+        "fields": {
+            "nombre": "Libreta"
+        }
+    },
+    {
         "model": "core.persona",
         "pk": "11000222",
         "fields": {

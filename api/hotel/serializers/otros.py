@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from apps.hotel.models import Habitacion, Paquete, Temporada, Descuento, PrecioPorTipo
 
-from core.serializers.otros import TipoHabitacionSerializer
+from api.core.serializers.otros import TipoHabitacionSerializer
 
 
 class HabitacionSerializer(serializers.ModelSerializer):
