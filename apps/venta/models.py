@@ -1,16 +1,23 @@
 from django.db import models
-from apps.hotel.models import Habitacion, Paquete
+
+# from apps.hotel.models import Habitacion, Paquete
 from apps.core.models import Cliente
+
+
+# Habitacion, Paquete y todo lo relacionado con estos dos
+# estan comentados por que se genera un bucle de importacion
+# el modelo de hotel importa el de venta y este mismo importa el de hotel
+# ver como solucionar
 
 
 class Alquiler(models.Model):
     fecha_inicio = models.DateField()
     fecha_fin = models.DateField()
     pasajeros = models.IntegerField()
-    habitaciones = models.ManyToManyField(
-        Habitacion, related_name="alquileres", blank=True
-    )
-    paquetes = models.ManyToManyField(Paquete, blank=True)
+    # habitaciones = models.ManyToManyField(
+    # Habitacion, related_name="alquileres", blank=True
+    # )
+    # paquetes = models.ManyToManyField(Paquete, blank=True)
     importe = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, null=True)
 
