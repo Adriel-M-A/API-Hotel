@@ -26,11 +26,11 @@ class HotelSerializer(serializers.ModelSerializer):
 
 # Este serializador es utilizado para dar un listado de todos los hoteles, con su informacion relevante segun el contexto a utilizar
 class HotelMidSerializer(HotelSerializer):
-    direccion = UbicacionSerializer(source="direccion")
+    direccion = UbicacionSerializer()
     categoria = CategoriaSerializer(read_only=True)
 
     class Meta(HotelSerializer.Meta):
-        fields = HotelSerializer.Meta.fields
+        fields = HotelSerializer.Meta.fields + ["direccion", "categoria"]
 
 
 # Este serializador es utilizado para mostrar todos los datos de un hotel, tanto los datos basicos como la serializacion de los datos relacionados con el hotel

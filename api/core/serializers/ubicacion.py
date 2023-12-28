@@ -32,8 +32,8 @@ class DireccionSerializer(serializers.ModelSerializer):
 
 
 class UbicacionSerializer(serializers.Serializer):
-    pais = serializers.CharField(source="direccion.ciudad.provincia.pais.nombre")
-    provincia = serializers.CharField(source="direccion.ciudad.provincia.nombre")
-    ciudad = serializers.CharField(source="direccion.ciudad.nombre")
-    calle = serializers.CharField(source="direccion.calle")
-    numero = serializers.IntegerField(source="direccion.numero")
+    pais = serializers.CharField(source="ciudad.provincia.pais.nombre")
+    provincia = serializers.CharField(source="ciudad.provincia.nombre")
+    ciudad = serializers.CharField(source="ciudad.nombre")
+    calle = serializers.CharField()
+    numero = serializers.IntegerField()
