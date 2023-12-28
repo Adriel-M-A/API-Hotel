@@ -1,0 +1,7 @@
+DATABASE_ENGINE=django.db.backends.postgresql
+DATABASE_NAME=apihotel
+DATABASE_USER=postgres
+DATABASE_PASSWORD=123456
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+SECRET_KEY=django-insecure-si_==rug=6^%7f=$7k+01kwtb_mv+5q3e$h99kl@67r6$rt%&
