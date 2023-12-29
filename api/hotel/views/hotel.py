@@ -17,12 +17,14 @@ class HotelViewSet(viewsets.ModelViewSet):
     queryset = Hotel.objects.all()
     serializer_class = HotelSerializer
 
+    # Vista para mostrar/listar hoteles
     @action(detail=False, url_path="mid")
     def mid(self, request):
         hoteles = Hotel.objects.all()
         serializer = HotelMidSerializer(hoteles, many=True)
         return Response(serializer.data)
 
+    # Vista para mostrar un unico hotel
     @action(detail=True, url_path="full")
     def full(self, request, pk=None):
         try:

@@ -38,16 +38,19 @@ class HotelMidSerializer(HotelSerializer):
 class HotelFullSerializer(HotelMidSerializer):
     habitaciones = HabitacionSerializer(many=True, read_only=True)
     encargado = EncargadoSerializer(read_only=True)
-    tarifas = PrecioPorTipoSerializer(source="tarifas", many=True, read_only=True)
+    tarifas = PrecioPorTipoSerializer(many=True, read_only=True)
     paquetes = PaqueteSerializer(many=True, read_only=True)
     descuentos = DescuentoSerializer(many=True, read_only=True)
     temporadas = TemporadaSerializer(many=True, read_only=True)
-    alquileres = AlquilerSerializer(many=True, read_only=True, source="alquileres")
+    alquileres = AlquilerSerializer(many=True, read_only=True)
 
     class Meta(HotelMidSerializer.Meta):
         fields = HotelMidSerializer.Meta.fields + [
-            "habitaciones",
+            "habitaciones",  # El error de habitaciones que sale puede ser que sea por que no existen habitaciones
+            "encargado",
             "tarifas",
             "paquetes",
+            "descuentos",
+            "temporadas",
             "alquileres",
         ]
