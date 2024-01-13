@@ -163,7 +163,7 @@
         "model": "hotel.hotel",
         "pk": 9,
         "fields": {
-            "nombre": "Piray└",
+            "nombre": "Piray",
             "direccion": 9,
             "descripcion": "descripción",
             "habilitado": false,
